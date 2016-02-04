@@ -32,7 +32,7 @@ public class SourceNameSourceConnector extends SourceConnector {
 
     @Override
     public Class<? extends Task> taskClass() {
-        return SalesforceSourceTask.class;
+        return SourceNameSourceTask.class;
     }
 
     @Override

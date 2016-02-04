@@ -13,7 +13,7 @@ import java.util.*;
  * Created by Andrea Patelli on 04/02/2016.
  */
 public class SourceNameSourceTask extends SourceTask {
-    private final static Logger log = LoggerFactory.getLogger(SalesforceSourceTask.class);
+    private final static Logger log = LoggerFactory.getLogger(SourceNameSourceTask.class);
 
     private String exampleConfig;
 
@@ -21,12 +21,12 @@ public class SourceNameSourceTask extends SourceTask {
 
     @Override
     public String version() {
-        return new SalesforceSourceConnector().version();
+        return new SourceNameSourceConnector().version();
     }
 
     @Override
     public void start(Map<String, String> props) {
-        exampleConfig = props.get(SalesforceSourceConnector.EXAMPLE_CONFIG);
+        exampleConfig = props.get(SourceNameSourceConnector.EXAMPLE_CONFIG);
         if(exampleConfig == null)
             throw new ConnectException("config null");
 
